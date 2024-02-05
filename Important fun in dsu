@@ -1,3 +1,4 @@
+int sz[N],le[N];
 void init()
 {
    for(int I=1;I<=n;I++)
