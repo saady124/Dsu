@@ -1,0 +1,16 @@
+void init()
+{
+   for(int I=1;I<=n;I++)
+      sz[I]=1,le[I]=I;
+}
+int find(int u)
+{
+  return le[u]=(u==le[u]?u:find(le[u]));
+}
+void join(int u,int v)
+{
+  u=find(u);
+  v=find(v);
+  le[v]=u;
+  sz[u]+=sz[v];
+}
